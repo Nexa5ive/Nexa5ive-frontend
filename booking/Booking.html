@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booking Form</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  
+  <h2>Book Your Appointment</h2>
+  <form id="bookingForm">
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Phone:</label><br>
+    <input type="text" name="phone" required><br><br>
+
+    <label>Date:</label><br>
+    <input type="date" name="date" required><br><br>
+
+    <label>Message:</label><br>
+    <textarea name="message" required></textarea><br><br>
+
+    <button type="submit">Book Now</button>
+  </form>
+
+  <p id="responseMsg"></p>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = {
+        name: e.target.name.value,
+        email: e.target.email.value,
+        phone: e.target.phone.value,
+        date: e.target.date.value,
+        message: e.target.message.value,
+      };
+
+      try {
+        const res = await fetch("http://localhost:5000/book", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+        const data = await res.json();
+        document.getElementById("responseMsg").innerText = data.message;
+      } catch (err) {
+        document.getElementById("responseMsg").innerText = "Error sending booking request.";
+      }
+    });
+  </script>
+</body>
+</html>
