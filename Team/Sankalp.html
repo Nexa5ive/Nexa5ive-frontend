@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile - Nexa5ive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f7fb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-card {
+            background: #fff;
+            border-radius: 20px;
+            max-width: 380px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .profile-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .profile-content {
+            padding: 20px;
+        }
+
+        .profile-content h2 {
+            margin: 10px 0 5px;
+            font-size: 1.8rem;
+            color: #222;
+        }
+
+        .profile-content p.role {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .profile-content p.bio {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            color: #0077b5;
+            text-align: center;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            background: #0077b5;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-card">
+        <img src="../assets/sankalp.jpg" alt="John Doe">
+        <div class="profile-content">
+            <h2>Sankalp Sachan</h2>
+            <p class="role">CTO/Head Developer</p>
+            <p class="bio">
+                *Vision for Nexa5ive*:
+                “To innovate and deliver scalable tech solutions that empower students, businesses, and communities to thrive in the digital era.”
+                <br />
+                <br />
+
+                Skills: MERN Stack Development (HTML, CSS, JavaScript, React, Node.js, MongoDB)
+
+                <br />
+                <br />
+
+                Strengths:Problem-Solving Mindset, Leadership & Collaboration, Innovative Thinking, Tech-Driven Approach 
+
+                <br />
+                <br />
+                Quote/Motto:
+                "Building technology with passion, innovation, and purpose."
+            </p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/_sankalpsachan35_?igsh=aHQ2Nnp6MDZ0dWw5&utm_source=ig_contact_invite"><i
+                        class="fa-brands fa-instagram"></i></a>
+                          <a href="https://www.linkedin.com/in/sachansankalp2007"><i class="fab fa-linkedin"></i></a>
+
+                <a href="mailto:sankalpsachan2007@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
