@@ -43,7 +43,7 @@
       };
 
       try {
-        const res = await fetch("http://localhost:5000/book", {
+        const res = await fetch("https://booking-ss1d.onrender.com/book", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
@@ -57,3 +57,4 @@
   </script>
 </body>
 </html>
+
